@@ -20,6 +20,7 @@ STROKE_COLOR = "black"
 STROKE_WIDTH = 3
 
 
+
 def compile_video(video_paths: List[Optional[str]],
                   audio_path: str,
                   captions: List[str],
@@ -34,6 +35,7 @@ def compile_video(video_paths: List[Optional[str]],
         else:
             clip = TextClip("", size=DEFAULT_SIZE, color="black", duration=duration)
         clip = clip.set_duration(duration).resize(height=DEFAULT_SIZE[1]).resize(width=DEFAULT_SIZE[0])
+
 
 
         caption = (
