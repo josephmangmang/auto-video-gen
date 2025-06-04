@@ -10,6 +10,7 @@ This project provides a set of Python utilities to generate a short inspirationa
 - **Caption Generator** – outputs an SRT file with centred captions.
 - **Video Compiler** – stitches the clips, audio and captions into a vertical video using a bold serif font with a light-yellow fill and black outline for captions.
 
+
 ## Requirements
 
 - Python 3.8+

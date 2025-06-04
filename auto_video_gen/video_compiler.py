@@ -35,6 +35,7 @@ def compile_video(video_paths: List[Optional[str]],
             clip = TextClip("", size=DEFAULT_SIZE, color="black", duration=duration)
         clip = clip.set_duration(duration).resize(height=DEFAULT_SIZE[1]).resize(width=DEFAULT_SIZE[0])
 
+
         caption = (
             TextClip(
                 text,
@@ -47,6 +48,7 @@ def compile_video(video_paths: List[Optional[str]],
             .set_position("center")
             .set_duration(duration)
         )
+
         clips.append(CompositeVideoClip([clip, caption]))
 
     video = concatenate_videoclips(clips)
