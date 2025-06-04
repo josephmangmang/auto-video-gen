@@ -14,6 +14,10 @@ from moviepy import (
 
 DEFAULT_SIZE = (1080, 1920)
 FONT_SIZE = 70
+FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"
+FONT_COLOR = "lightyellow"
+STROKE_COLOR = "black"
+STROKE_WIDTH = 3
 
 
 def compile_video(video_paths: List[Optional[str]],
@@ -31,9 +35,18 @@ def compile_video(video_paths: List[Optional[str]],
             clip = TextClip("", size=DEFAULT_SIZE, color="black", duration=duration)
         clip = clip.set_duration(duration).resize(height=DEFAULT_SIZE[1]).resize(width=DEFAULT_SIZE[0])
 
-        caption = (TextClip(text, fontsize=FONT_SIZE, color="white", stroke_color="black", stroke_width=2)
-                   .set_position("center")
-                   .set_duration(duration))
+        caption = (
+            TextClip(
+                text,
+                fontsize=FONT_SIZE,
+                font=FONT_PATH,
+                color=FONT_COLOR,
+                stroke_color=STROKE_COLOR,
+                stroke_width=STROKE_WIDTH,
+            )
+            .set_position("center")
+            .set_duration(duration)
+        )
         clips.append(CompositeVideoClip([clip, caption]))
 
     video = concatenate_videoclips(clips)
