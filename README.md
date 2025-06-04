@@ -8,7 +8,8 @@ This project provides a set of Python utilities to generate a short inspirationa
 - **Voice Over Generator** – converts the script to speech using `gTTS` and returns approximate timestamps.
 - **GIF Finder** – searches Giphy for relevant clips for each line.
 - **Caption Generator** – outputs an SRT file with centred captions.
-- **Video Compiler** – stitches the clips, audio and captions into a vertical video.
+- **Video Compiler** – stitches the clips, audio and captions into a vertical video using a bold serif font with a light-yellow fill and black outline for captions.
+
 
 ## Requirements
 
